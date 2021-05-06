@@ -12,8 +12,10 @@ import {
 } from "shards-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
+import SearchResults from '../components/SearchResults';
 
 const Home = () => {
+
     return(
         <>
             <Head>
@@ -28,6 +30,7 @@ const Home = () => {
                     </a>
                 </Alert>
                 <Navigation />
+                <SearchResults route={'/api/creators'}/>
                 </>
             </>
     )
