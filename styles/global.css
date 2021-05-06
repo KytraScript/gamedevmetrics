@@ -2,4 +2,98 @@ html,
 body {
     padding: 0;
     margin: 0;
+    background-color: rgba(43, 43, 43, 0.15);
 }
+
+.btn{
+    /* line-height: 1.25em !important;
+    text-align: center !important;
+    display:table-cell !important;
+    vertical-align:middle !important; */
+}
+
+.game-title-btn{
+    padding: 4px 6px 4px 6px;
+    width: 100%;
+    text-align: left;
+    margin: 3px 5px 3px 0;
+    background-color: #785EF0;
+    border-color: #785EF0;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 20px;
+    background-color: rgba(43, 43, 43, 0.94);
+    text-align: justify-all;
+    position: relative;
+}
+
+.absolute-tag-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 6px;
+}
+
+.absolute-tag-wrapper button{
+    padding: 6px;
+    font-weight: normal;
+    background-color: rgba(100, 143, 255, 0.9);
+    border-color: #648FFF;
+    margin-bottom: 3px;
+    color: white;
+}
+
+.card-footer{
+    border-top: 2px solid #8072AC;
+    background-color: #DC267F;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card-footer button{
+    border: 2px solid #291F1E;
+    color: #291F1E;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.88);
+}
+
+.card-title{
+    color: #FFB000;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.25);
+    font-size: 22px;
+    margin-top: -14px;
+}
+
+.card-body{
+ background-color: rgba(43, 43, 43, 0.94);
+}
+
+.card-body h6{
+    color: #FE6100;
+    margin-bottom: 0;
+}
+
+.card-wrapper{
+    width: 260px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-wrapper:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-image{
+    min-height: 285px;
+    min-width: 260px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 0 0 rgba(128, 114, 172, 0.4),
+    0 -2px 0 0 rgba(128, 114, 172, 0.4);
+}
+
+

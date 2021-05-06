@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from "shards-react";
 import { useQuery } from 'react-query';
+import CreatorCard from './CreatorCard';
 
 const SearchResults = ({route}) => {
 
@@ -11,16 +12,21 @@ const SearchResults = ({route}) => {
     )
 
     if (isLoading) return 'Loading...';
-
     if (error) return 'An error has occurred: ' + error.message;
 
     return(
         <>
             <Container>
                 <Row>
-                    <Col sm={{ size: 8, order: 2, offset: 2 }}>
-                        {JSON.stringify(data)}
-                    </Col>
+                        {
+                            data.data.results.map( e => {
+                            return (
+                                <Col sm="12" md="4" lg="3">
+                                    <CreatorCard creator={e} key={e.id}/>
+                                </Col>
+                            )
+                        })
+                        }
                 </Row>
             </Container>
         </>
