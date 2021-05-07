@@ -17,11 +17,11 @@ const SearchResults = ({route}) => {
     return(
         <>
             <Container>
-                <Row>
+                <Row className={"results-row"}>
                         {
                             data.data.results.map( e => {
                             return (
-                                <Col sm="12" md="4" lg="3">
+                                <Col className={'results-col'} xs="12" sm="12" md="6" lg="4" xl="4" >
                                     <CreatorCard creator={e} key={e.id}/>
                                 </Col>
                             )
