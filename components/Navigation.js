@@ -14,8 +14,8 @@ import {
     InputGroupAddon,
     InputGroupText,
     FormInput,
-    Collapse
-} from "shards-react";
+    Collapse, Button
+} from 'shards-react';
 
 export default class NavExample extends React.Component {
     constructor(props) {
@@ -50,46 +50,36 @@ export default class NavExample extends React.Component {
 
     render() {
         return (
-            <Navbar type="dark" theme="primary" expand="md">
-                <NavbarBrand href="#">Shards React</NavbarBrand>
-                <NavbarToggler onClick={this.toggleNavbar} />
-
+            <Navbar type="dark" theme="dark" expand="md" style={{ marginBottom: '12px' }}>
+                <NavbarBrand href="#">Game Dev Metrics</NavbarBrand>
+                <NavbarToggler onClick={this.toggleNavbar}/>
                 <Collapse open={this.state.collapseOpen} navbar>
                     <Nav navbar>
-                        <NavItem>
-                            <NavLink active href="#">
-                                Active
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="#" disabled>
-                                Disabled
-                            </NavLink>
-                        </NavItem>
                         <Dropdown
                             open={this.state.dropdownOpen}
                             toggle={this.toggleDropdown}
                         >
-                            <DropdownToggle nav caret>
-                                Dropdown
-                            </DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem>Action</DropdownItem>
-                                <DropdownItem>Another action</DropdownItem>
-                                <DropdownItem>Something else here</DropdownItem>
+                            <Button theme={'dark'} style={{ padding: '2px', borderTopRightRadius: 0, borderBottomRightRadius: 0, border: '1px solid #212529' }}>
+                                <img alt={'navigation sprite'} src={'../navi.png'} style={{ position: 'relative', height: '48px', width: 'auto' }}/>
+                            </Button>
+                            <DropdownToggle split size={'lg'} theme={'dark'} style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}/>
+                            <DropdownMenu right>
+                                <DropdownItem>Login</DropdownItem>
+                                <DropdownItem>Register</DropdownItem>
+                                <DropdownItem>About</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
                     </Nav>
 
                     <Nav navbar className="ml-auto">
-                        <InputGroup size="sm" seamless>
+                        {/*<InputGroup size="sm" seamless>
                             <InputGroupAddon type="prepend">
                                 <InputGroupText>
-                                    {/* There was an icon here at one point*/}
+                                     There was an icon here at one point
                                 </InputGroupText>
                             </InputGroupAddon>
                             <FormInput className="border-0" placeholder="Search..." />
-                        </InputGroup>
+                        </InputGroup>*/}
                     </Nav>
                 </Collapse>
             </Navbar>

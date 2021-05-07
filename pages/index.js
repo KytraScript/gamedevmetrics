@@ -7,13 +7,6 @@ const Home = () => {
 
     return(
         <Layout title={"Main"}>
-                <h2>Hello Charlie! I love you!</h2>
-                <Alert theme="primary">
-                    Alert - Primary Theme (default) -{" "}
-                    <a className="alert-link" href="#">
-                        Example Link
-                    </a>
-                </Alert>
                 <SearchResults route={'/api/creators'}/>
         </Layout>
     )
