@@ -1,22 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { Alert } from 'shards-react';
 import SearchResults from '../components/SearchResults';
+import { Button, ButtonGroup } from "shards-react";
 import Layout from '../components/Layout';
+import { useRouter } from 'next/router'
 
 const Home = () => {
 
+    const router = useRouter()
+
+    const handleClick = (e, path) => {
+        e.preventDefault()
+        router.push(path)
+    }
+
     return(
         <Layout title={"Main"}>
-                <h2>Hello Charlie! I love you!</h2>
-                <Alert theme="primary">
-                    Alert - Primary Theme (default) -{" "}
-                    <a className="alert-link" href="#">
-                        Example Link
-                    </a>
-                </Alert>
-                <SearchResults route={'/api/creators'}/>
+
         </Layout>
     )
 }
 
 export default Home;
+
+
+
+
+
+
+{ /*<ButtonGroup vertical>
+                <Button theme="secondary" onClick={ (e) => handleClick(e, '/creators') }>Creators</Button>
+            </ButtonGroup>*/ }

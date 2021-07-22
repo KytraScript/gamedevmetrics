@@ -22,10 +22,10 @@ const SearchResults = ({route}) => {
                             data.data.results.map( e => {
                             return (
                                 <Col className={'results-col'} xs="12" sm="12" md="6" lg="4" xl="4" >
-                                    <CreatorCard creator={e} key={e.id}/>
+                                    { route === '/api/creators' ? <CreatorCard creator={e} key={e.id}/> : '' }
                                 </Col>
-                            )
-                        })
+                                )
+                            })
                         }
                 </Row>
             </Container>
