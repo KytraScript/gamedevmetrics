@@ -7,8 +7,6 @@ const CreatorDetail = () => {
         <Layout title={"Creator Detail"}>
             Beep
         </Layout>
-
-
     )
 }
 
